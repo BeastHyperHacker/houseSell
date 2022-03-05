@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for a city, zipcode, address, etc.">
+    <title>Search</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href= "map.html">Map</a></li>
+                <li><a href= "pies.html">Example Search Result</a></li>
+
+            </ul>
+        </nav>
+    </header> 
+
+
+
+
+    <div class="hero">
+        <div class="searchBox">
+            <img src="https://mpng.subpng.com/20190728/lyx/kisspng-house-openclipart-silhouette-line-art-drawing-zervas-law-offices-5d3d1f519c3b13.2498477615642868016399.jpg" id="google-img">
+            <input type="search" placeholder="Search for a city, zipcode, address, etc." id="input">
+            <img src="Img/mic.png" alt="" id="mic">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showDetails() {
+            var a = document.getElementById('sea');
+            window.location = 'https://www.google.com/search?q=' + a;
+        }
+        let input = document.getElementById('input');
+        if(window.innerWidth < 430){
+        input.setAttribute('placeholder', 'Search')
+        }
+        console.log(window.innerWidth)
+
+    </script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f3ff;
+    width: 100%;
+    height: 100vh;
+}
+
+.searchBox {
+    width: 44rem;
+    border-radius: 50px;
+    padding: 10px 22px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+#google-img {
+    width: 30px;
+    cursor: pointer;
+}
+
+#mic {
+    width: 17px;
+    cursor: pointer;
+}
+
+#input {
+    background: transparent;
+    border: 0;
+    width: 85%;
+    font-size: 20px;
+    padding: 5px;
+}
+#input:focus {
+    outline: none;
+}
+
+@media (max-width:430px) {
+    #input::placeholder{
+        padding-left: 13px;
+    }
+}
+    </style>
+</body>
+
+</html>
